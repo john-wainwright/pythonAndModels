@@ -83,10 +83,7 @@ with open ("LeakyBucket0ResultsFile.txt", 'w') as outFile:
     outFile.write ("time rainfall infiltrationRate subsurfFlow " + 
                    "drainage soilMoist overlandFlow\n")
 
-    for time in range (0, stormLength * 2):
-        if time == stormLength:
-            rainfall = 0.
-            
+    for time in range (0, stormLength):
         #calculate current value of infiltration rate
         infiltrationRate = finalInfiltPrime + (satSoilMoist / soilMoist)
         #calculate Hortonian overland flow

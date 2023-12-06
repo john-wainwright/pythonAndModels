@@ -32,9 +32,7 @@ if __name__ == '__main__':
     soilMoistOut = []
     overlandFlowOut = []
     subsurfFlowOut = []
-    for time in range (0, stormLength * 2):
-        if time == stormLength:
-            rainfall = 0.
+    for time in range (0, stormLength):
         #update this timestep - nothing upslope of soil1 so zero runon and 
         #  subsurf inflow
         soil1.UpdateSoilMoist (rainfall, 0., 0., timestep)

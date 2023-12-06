@@ -155,9 +155,7 @@ if __name__ == '__main__':
         outFile.write ("time rainfall infiltrationRate subsurfFlow " + 
                        "drainage soilMoist overlandFlow\n")
 
-        for time in range (0, stormLength * 2):
-            if time == stormLength:
-                rainfall = 0.
+        for time in range (0, stormLength):
             #update this timestep - nothing upslope so zero runon and subsurf inflow
             soil.UpdateSoilMoist (rainfall, 0., 0., timestep)
             print (time, rainfall, soil.infiltRate, soil.subsurfFlow, 
